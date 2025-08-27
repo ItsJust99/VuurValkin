@@ -2,15 +2,29 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int maxHealth = 100;
+    private int currentHealth;
+
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(int amount)
     {
-        
+        currentHealth -= amount;
+        currentHealth = Mathf.Max(0, currentHealth);
+        Debug.Log($"[PLAYER] HP: {currentHealth}");
+    }
+
+    //Word gehendeld in trunbased script
+    public bool IsDead()
+    {
+        return currentHealth <= 0;
+    }
+
+    public int GetHealth()
+    {
+        return currentHealth;
     }
 }

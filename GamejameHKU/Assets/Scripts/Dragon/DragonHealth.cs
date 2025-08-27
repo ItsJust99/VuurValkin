@@ -2,15 +2,28 @@ using UnityEngine;
 
 public class DragonHealth : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int maxHealth = 100;
+    private int currentHealth;
+
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(int amount)
     {
-        
+        currentHealth -= amount;
+        currentHealth = Mathf.Max(0, currentHealth);
+        Debug.Log($"Dragon HP: {currentHealth}");
+    }
+
+    //Word gehandeld in trunbased
+    public bool IsDead()
+    {
+        return currentHealth <= 0;
+    }
+    public int GetHealth()
+    {
+        return currentHealth;
     }
 }
