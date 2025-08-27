@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TurnBased : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class TurnBased : MonoBehaviour
     //Dragon attack 
     public Animator enemyAnimator;
 
+    //player attack
+    public Animator playerAnimator;
 
     private bool _playerTurn;
 
@@ -35,6 +38,22 @@ public class TurnBased : MonoBehaviour
         if (!_playerTurn)
         {
             return;
+        }
+
+        if (playerAnimator != null && AttackButton1)
+        {
+            enemyAnimator.SetBool("AttackLeft", true);
+            Invoke(nameof(ResetAttackAnimation), 1f);
+        }
+        if (playerAnimator != null && AttackButton2)
+        {
+            enemyAnimator.SetBool("AttackFront", true);
+            Invoke(nameof(ResetAttackAnimation), 1f);
+        }
+        if (playerAnimator != null && AttackButton2)
+        {
+            enemyAnimator.SetBool("AttackRight", true);
+            Invoke(nameof(ResetAttackAnimation), 1f);
         }
 
         dragonHeath.TakeDamage(damage);
@@ -85,6 +104,12 @@ public class TurnBased : MonoBehaviour
         if (enemyAnimator != null)
         {
             enemyAnimator.SetBool("Attack1", false);
+        }
+        if (playerAnimator != null)
+        {
+            playerAnimator.SetBool("AttackFront", false);
+            playerAnimator.SetBool("AttackLeft", false);
+            playerAnimator.SetBool("AttackRight", false);
         }
     }
 

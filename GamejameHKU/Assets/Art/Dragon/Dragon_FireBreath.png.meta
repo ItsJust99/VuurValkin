@@ -136,12 +136,12 @@ TextureImporter:
       name: Dragon_FireBreath_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 2852
-        width: 478
-        height: 216
+        x: 0
+        y: 2816
+        width: 512
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -158,12 +158,12 @@ TextureImporter:
       name: Dragon_FireBreath_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 2596
-        width: 478
-        height: 217
+        x: 0
+        y: 2560
+        width: 512
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -180,12 +180,12 @@ TextureImporter:
       name: Dragon_FireBreath_2
       rect:
         serializedVersion: 2
-        x: 17
-        y: 2340
-        width: 478
-        height: 218
+        x: 0
+        y: 2304
+        width: 512
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -202,12 +202,12 @@ TextureImporter:
       name: Dragon_FireBreath_3
       rect:
         serializedVersion: 2
-        x: 17
-        y: 2084
-        width: 478
-        height: 216
+        x: 0
+        y: 2048
+        width: 512
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -224,12 +224,12 @@ TextureImporter:
       name: Dragon_FireBreath_4
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1828
-        width: 478
-        height: 212
+        x: 0
+        y: 1792
+        width: 512
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -246,12 +246,12 @@ TextureImporter:
       name: Dragon_FireBreath_5
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1572
-        width: 478
-        height: 211
+        x: 0
+        y: 1536
+        width: 512
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -268,12 +268,12 @@ TextureImporter:
       name: Dragon_FireBreath_6
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1316
-        width: 478
-        height: 211
+        x: 0
+        y: 1280
+        width: 512
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -290,12 +290,12 @@ TextureImporter:
       name: Dragon_FireBreath_7
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1060
-        width: 478
-        height: 211
+        x: 0
+        y: 1024
+        width: 512
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -312,12 +312,12 @@ TextureImporter:
       name: Dragon_FireBreath_8
       rect:
         serializedVersion: 2
-        x: 17
-        y: 804
-        width: 478
-        height: 211
+        x: 0
+        y: 768
+        width: 512
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -334,12 +334,12 @@ TextureImporter:
       name: Dragon_FireBreath_9
       rect:
         serializedVersion: 2
-        x: 17
-        y: 548
-        width: 478
-        height: 211
+        x: 0
+        y: 512
+        width: 512
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -356,12 +356,12 @@ TextureImporter:
       name: Dragon_FireBreath_10
       rect:
         serializedVersion: 2
-        x: 17
-        y: 292
-        width: 478
-        height: 212
+        x: 0
+        y: 256
+        width: 512
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -378,12 +378,12 @@ TextureImporter:
       name: Dragon_FireBreath_11
       rect:
         serializedVersion: 2
-        x: 17
-        y: 36
-        width: 478
-        height: 214
+        x: 0
+        y: 0
+        width: 512
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -400,7 +400,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d39eff731c1e3354c8a0e65f6a09803b
     internalID: 0
     vertices: []
     indices: 
@@ -408,7 +408,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":12.0},"gridSpriteSize":{"x":512.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Dragon_FireBreath_0: -6517956047146342956
       Dragon_FireBreath_1: 5599946480658796376

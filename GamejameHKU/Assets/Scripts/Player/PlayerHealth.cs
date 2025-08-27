@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -14,6 +15,13 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         UpdateUI();
     }
+    private void Update()
+    {
+        if (currentHealth == 0)
+        {
+            LoadNextScene();
+        }
+    }
 
     public void TakeDamage(int amount)
     {
@@ -27,6 +35,10 @@ public class PlayerHealth : MonoBehaviour
     public bool IsDead()
     {
         return currentHealth <= 0;
+    }
+    private void LoadNextScene()
+    {
+        SceneManager.LoadScene("Loose");
     }
 
     public int GetHealth()

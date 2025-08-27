@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DragonHealth : MonoBehaviour
@@ -13,7 +15,13 @@ public class DragonHealth : MonoBehaviour
         currentHealth = maxHealth;
         UpdateUI();
     }
-
+    private void Update()
+    {
+        if (currentHealth == 0)
+        {
+            LoadNextScene();
+        }
+    }
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
@@ -25,7 +33,13 @@ public class DragonHealth : MonoBehaviour
     //Word gehandeld in trunbased
     public bool IsDead()
     {
+        
         return currentHealth <= 0;
+    }
+    
+    private void LoadNextScene()
+    {
+        SceneManager.LoadScene("WIn");
     }
     public int GetHealth()
     {
