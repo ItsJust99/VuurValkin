@@ -14,8 +14,7 @@ public class TurnBased : MonoBehaviour
     public PlayerHealth playerHealth;
 
     //Dragon attack 
-    public GameObject enemyAttackPrefab; //for now only 1 attack I want 2 in total
-    public Transform attackSpawnPoint;
+    public Animator enemyAnimator;
 
 
     private bool _playerTurn;
@@ -23,9 +22,12 @@ public class TurnBased : MonoBehaviour
 
     public void Start()
     {
-        AttackButton1.onClick.AddListener(() => OnPlayerAttack(1));
-        AttackButton2.onClick.AddListener(() => OnPlayerAttack(2));
-        AttackButton3.onClick.AddListener(() => OnPlayerAttack(3));
+        AttackButton1.onClick.AddListener(() => OnPlayerAttack(10));
+        AttackButton2.onClick.AddListener(() => OnPlayerAttack(15));
+        AttackButton3.onClick.AddListener(() => OnPlayerAttack(5));
+
+        _playerTurn = true;   
+        SetButtons(true);
     }
 
     public void OnPlayerAttack(int damage)
@@ -41,28 +43,60 @@ public class TurnBased : MonoBehaviour
         if (dragonHeath.IsDead())
         {
             Debug.Log("Dragon takes damage");
-            SetButtonse(false);
+            SetButtons(false);
             return;
         }
 
         _playerTurn = false;
+        SetButtons(false);
         Invoke(nameof(DragonTurn), 1.5f); //Delay before dragon starts 
     }
     void DragonTurn()
     {
-        Instantiate(enemyAttackPrefab, attackSpawnPoint.position, Quaternion.identity);
+        if (enemyAnimator != null)
+        {
+            enemyAnimator.SetBool("Attack1", true);
+            Invoke(nameof(ResetAttackAnimation), 1f);
+            Invoke(nameof(dammagePlayerOwO), 1f);
+
+            
+        }
+
+        //int damage = Random.Range(5, 16);
+        //playerHealth.TakeDamage(damage);
+
+
+        if (playerHealth.IsDead())
+        {
+            SetButtons(false);
+            return;
+        }
 
         Invoke(nameof(BackToPlayerTurn), 2f); //Delay before player starts
+    }
+    void dammagePlayerOwO()
+    {
+        int damage = Random.Range(5, 16);
+        playerHealth.TakeDamage(damage);
+    }
+
+    void ResetAttackAnimation()
+    {
+        if (enemyAnimator != null)
+        {
+            enemyAnimator.SetBool("Attack1", false);
+        }
     }
 
     void BackToPlayerTurn()
     {
         if (!playerHealth.IsDead())
         {
+            SetButtons(true);
             _playerTurn = true;
         }
     }
-    void SetButtonse(bool state)
+    void SetButtons(bool state)
     {
         AttackButton1.interactable = state;
         AttackButton2.interactable = state;
