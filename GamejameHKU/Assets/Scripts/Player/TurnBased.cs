@@ -25,15 +25,15 @@ public class TurnBased : MonoBehaviour
 
     public void Start()
     {
-        AttackButton1.onClick.AddListener(() => OnPlayerAttack(10));
-        AttackButton2.onClick.AddListener(() => OnPlayerAttack(15));
-        AttackButton3.onClick.AddListener(() => OnPlayerAttack(5));
+        AttackButton1.onClick.AddListener(() => OnPlayerAttack(10, "AttackLeft"));
+        AttackButton2.onClick.AddListener(() => OnPlayerAttack(15, "AttackFront"));
+        AttackButton3.onClick.AddListener(() => OnPlayerAttack(5, "AttackRight"));
 
         _playerTurn = true;   
         SetButtons(true);
     }
 
-    public void OnPlayerAttack(int damage)
+    public void OnPlayerAttack(int damage, string animationTrigger)
     {
         if (!_playerTurn)
         {
@@ -42,17 +42,7 @@ public class TurnBased : MonoBehaviour
 
         if (playerAnimator != null && AttackButton1)
         {
-            enemyAnimator.SetBool("AttackLeft", true);
-            Invoke(nameof(ResetAttackAnimation), 1f);
-        }
-        if (playerAnimator != null && AttackButton2)
-        {
-            enemyAnimator.SetBool("AttackFront", true);
-            Invoke(nameof(ResetAttackAnimation), 1f);
-        }
-        if (playerAnimator != null && AttackButton2)
-        {
-            enemyAnimator.SetBool("AttackRight", true);
+            playerAnimator.SetBool(animationTrigger, true);
             Invoke(nameof(ResetAttackAnimation), 1f);
         }
 

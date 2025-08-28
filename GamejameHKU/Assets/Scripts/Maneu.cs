@@ -5,7 +5,7 @@ public class Maneu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("GamePlay");
     }
     public void Quit()
     {
@@ -14,7 +14,7 @@ public class Maneu : MonoBehaviour
     }
     public void RetryGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("GamePlay");
     }
     public void RMenu()
     {
